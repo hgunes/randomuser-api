@@ -9,7 +9,6 @@ xcuserdata/
 *.xcscmblueprint
 *.xccheckout
 
-test.txt
 
 ## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
 build/
