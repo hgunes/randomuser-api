@@ -15,6 +15,7 @@
 		BE26220A27BC57F700D7C8AA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE26220927BC57F700D7C8AA /* NetworkManager.swift */; };
 		BE26220D27BC583200D7C8AA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE26220C27BC583200D7C8AA /* User.swift */; };
 		BE26221427BC638200D7C8AA /* RUError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE26221327BC638200D7C8AA /* RUError.swift */; };
+		BE26221727BDA38300D7C8AA /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE26221627BDA38300D7C8AA /* UserCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		BE26220927BC57F700D7C8AA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		BE26220C27BC583200D7C8AA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BE26221327BC638200D7C8AA /* RUError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RUError.swift; sourceTree = "<group>"; };
+		BE26221627BDA38300D7C8AA /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +62,74 @@
 		BE2621EE27BC516700D7C8AA /* RandomUser */ = {
 			isa = PBXGroup;
 			children = (
+				BE26221F27BDB82100D7C8AA /* Support */,
+				BE26221E27BDB80D00D7C8AA /* Utilities */,
+				BE26221D27BDB7FB00D7C8AA /* Managers */,
+				BE26221B27BDB7D400D7C8AA /* Views */,
+				BE26221A27BDB7C300D7C8AA /* Models */,
+				BE26221927BDB7A500D7C8AA /* Controllers */,
+				BE2621FD27BC516B00D7C8AA /* Info.plist */,
+			);
+			path = RandomUser;
+			sourceTree = "<group>";
+		};
+		BE26221927BDB7A500D7C8AA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BE26220527BC567D00D7C8AA /* HomeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BE26221A27BDB7C300D7C8AA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BE26220C27BC583200D7C8AA /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BE26221B27BDB7D400D7C8AA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BE26221C27BDB7E800D7C8AA /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BE26221C27BDB7E800D7C8AA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BE26221627BDA38300D7C8AA /* UserCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		BE26221D27BDB7FB00D7C8AA /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				BE26220927BC57F700D7C8AA /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		BE26221E27BDB80D00D7C8AA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BE26221327BC638200D7C8AA /* RUError.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		BE26221F27BDB82100D7C8AA /* Support */ = {
+			isa = PBXGroup;
+			children = (
 				BE2621EF27BC516700D7C8AA /* AppDelegate.swift */,
 				BE2621F127BC516700D7C8AA /* SceneDelegate.swift */,
 				BE2621F827BC516B00D7C8AA /* Assets.xcassets */,
 				BE2621FA27BC516B00D7C8AA /* LaunchScreen.storyboard */,
-				BE2621FD27BC516B00D7C8AA /* Info.plist */,
-				BE26220527BC567D00D7C8AA /* HomeViewController.swift */,
-				BE26220927BC57F700D7C8AA /* NetworkManager.swift */,
-				BE26220C27BC583200D7C8AA /* User.swift */,
-				BE26221327BC638200D7C8AA /* RUError.swift */,
 			);
-			path = RandomUser;
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +207,7 @@
 				BE2621F227BC516700D7C8AA /* SceneDelegate.swift in Sources */,
 				BE26220D27BC583200D7C8AA /* User.swift in Sources */,
 				BE26220627BC567D00D7C8AA /* HomeViewController.swift in Sources */,
+				BE26221727BDA38300D7C8AA /* UserCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
