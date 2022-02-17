@@ -26,9 +26,16 @@ class UserCell: UICollectionViewCell {
   }
   
   
-  func set(name: String, avatar: UIImage) {
+  func set(name: String, avatarUrl: String) {
     nameLabel.text = name
-    userAvatar.image = avatar
+    
+    NetworkManager.shared.fetchUserAvatar(for: avatarUrl) { [weak self] image in
+      guard let self = self else { return }
+      
+      DispatchQueue.main.async {
+        self.userAvatar.image = image
+      }
+    }
   }
   
   
@@ -46,7 +53,7 @@ class UserCell: UICollectionViewCell {
     
     NSLayoutConstraint.activate([
       nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
-      nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
+      nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
       nameLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.7),
       
       userAvatar.centerYAnchor.constraint(equalTo: centerYAnchor),
