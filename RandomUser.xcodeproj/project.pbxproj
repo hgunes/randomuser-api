@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE25DA4F27BED6CB00691293 /* RUMainLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE25DA4E27BED6CB00691293 /* RUMainLabel.swift */; };
 		BE2621F027BC516700D7C8AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2621EF27BC516700D7C8AA /* AppDelegate.swift */; };
 		BE2621F227BC516700D7C8AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2621F127BC516700D7C8AA /* SceneDelegate.swift */; };
 		BE2621F927BC516B00D7C8AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE2621F827BC516B00D7C8AA /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE25DA4E27BED6CB00691293 /* RUMainLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RUMainLabel.swift; sourceTree = "<group>"; };
 		BE2621EC27BC516700D7C8AA /* RandomUser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomUser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE2621EF27BC516700D7C8AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE2621F127BC516700D7C8AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE25DA4D27BED6AF00691293 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				BE25DA4E27BED6CB00691293 /* RUMainLabel.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
 		BE2621E327BC516700D7C8AA = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +102,7 @@
 		BE26221B27BDB7D400D7C8AA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BE25DA4D27BED6AF00691293 /* Labels */,
 				BE26221C27BDB7E800D7C8AA /* Cells */,
 			);
 			path = Views;
@@ -201,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE25DA4F27BED6CB00691293 /* RUMainLabel.swift in Sources */,
 				BE26220A27BC57F700D7C8AA /* NetworkManager.swift in Sources */,
 				BE26221427BC638200D7C8AA /* RUError.swift in Sources */,
 				BE2621F027BC516700D7C8AA /* AppDelegate.swift in Sources */,

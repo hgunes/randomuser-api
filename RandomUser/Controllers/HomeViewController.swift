@@ -72,7 +72,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UserCell.reuseID, for: indexPath) as! UserCell
-    cell.set(name: users[indexPath.row].name.fullName, avatar: (UIImage(systemName: "person"))!)
+    cell.set(name: users[indexPath.row].name.fullName, avatarUrl: users[indexPath.row].picture.large)
     return cell
   }
   
