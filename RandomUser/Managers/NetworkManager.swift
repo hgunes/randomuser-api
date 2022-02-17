@@ -5,7 +5,7 @@
 //  Created by Harun Gunes on 15/02/2022.
 //
 
-import Foundation
+import UIKit
 
 
 class NetworkManager {
@@ -49,6 +49,33 @@ class NetworkManager {
       } catch {
         completed(.failure(.decodingError))
       }
+    }
+    task.resume()
+  }
+  
+  
+  func fetchUserAvatar(for userAvatarUrl: String, completed: @escaping (UIImage?) -> Void) {
+    
+    guard let url = URL(string: userAvatarUrl) else {
+      return
+    }
+    
+    let task = URLSession.shared.dataTask(with: url) { data, response, error in
+      
+      if let _ = error {
+        return
+      }
+      
+      guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+        return
+      }
+      
+      guard let data = data else {
+        return
+      }
+      
+      let image = UIImage(data: data)
+      completed(image)
     }
     task.resume()
   }
