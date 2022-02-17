@@ -56,7 +56,7 @@ class HomeViewController: UIViewController {
     let width = view.bounds.width
     let padding: CGFloat = 12
     let layout = UICollectionViewFlowLayout()
-    layout.itemSize = CGSize(width: width * 0.9, height: 80)
+    layout.itemSize = CGSize(width: width * 0.9, height: 90)
     layout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
     return layout
   }

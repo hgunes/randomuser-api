@@ -11,8 +11,8 @@ class UserCell: UICollectionViewCell {
   
   static let reuseID = "UserCell"
   
-  let nameLabel = UILabel()
-  let userAvatar = UIImageView()
+  let nameLabel = RUMainLabel()
+  let userAvatar = RUAvatarImageView(frame: .zero)
   
   
   override init(frame: CGRect) {
@@ -48,9 +48,6 @@ class UserCell: UICollectionViewCell {
     addSubview(nameLabel)
     addSubview(userAvatar)
     
-    nameLabel.translatesAutoresizingMaskIntoConstraints = false
-    userAvatar.translatesAutoresizingMaskIntoConstraints = false
-    
     NSLayoutConstraint.activate([
       nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
       nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
@@ -58,8 +55,8 @@ class UserCell: UICollectionViewCell {
       
       userAvatar.centerYAnchor.constraint(equalTo: centerYAnchor),
       userAvatar.leadingAnchor.constraint(equalTo: nameLabel.trailingAnchor, constant: 10),
-      userAvatar.heightAnchor.constraint(equalToConstant: 50),
-      userAvatar.widthAnchor.constraint(equalToConstant: 50)
+      userAvatar.heightAnchor.constraint(equalToConstant: 60),
+      userAvatar.widthAnchor.constraint(equalToConstant: 60)
     ])
   }
 }
