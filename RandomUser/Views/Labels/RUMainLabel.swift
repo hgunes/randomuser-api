@@ -22,7 +22,7 @@ class RUMainLabel: UILabel {
   
   private func configure() {
     translatesAutoresizingMaskIntoConstraints = false
-    font = UIFont.boldSystemFont(ofSize: 14)
-    textColor = .systemBackground
+    font = UIFont.boldSystemFont(ofSize: 18)
+    textColor = .black
   }
 }
