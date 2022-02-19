@@ -60,7 +60,7 @@ class UserInfoView: UIView {
       username.topAnchor.constraint(equalTo: userAvatar.bottomAnchor, constant: 20),
       username.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding),
       username.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding),
-      username.heightAnchor.constraint(equalToConstant: 20),
+      username.heightAnchor.constraint(equalToConstant: 24),
       
       personalDataLabel.topAnchor.constraint(equalTo: username.bottomAnchor, constant: 15),
       personalDataLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding),

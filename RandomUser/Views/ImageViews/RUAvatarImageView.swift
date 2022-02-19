@@ -23,6 +23,8 @@ class RUAvatarImageView: UIImageView {
   
   private func configure() {
     translatesAutoresizingMaskIntoConstraints = false
+    layer.borderWidth = 0.8
+    layer.borderColor = UIColor.systemGray4.cgColor
     layer.cornerRadius = 10
     clipsToBounds = true
   }
