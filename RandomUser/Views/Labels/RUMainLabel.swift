@@ -18,8 +18,8 @@ class RUMainLabel: UILabel {
   
   convenience init(align: NSTextAlignment, size: CGFloat) {
     self.init(frame: .zero)
-    self.textAlignment = align
-    self.font = UIFont.boldSystemFont(ofSize: size)
+    textAlignment = align
+    font = UIFont(name: "AppleSDGothicNeo-Bold", size: size)
   }
   
   

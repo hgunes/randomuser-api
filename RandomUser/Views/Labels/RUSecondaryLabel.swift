@@ -24,7 +24,7 @@ class RUSecondaryLabel: UILabel {
   convenience init(align: NSTextAlignment, size: CGFloat) {
     self.init(frame: .zero)
     textAlignment = align
-    font = UIFont.boldSystemFont(ofSize: size)
+    font = UIFont(name: "AppleSDGothicNeo-Bold", size: size)
   }
   
   
