@@ -22,6 +22,7 @@ class RUMainLabel: UILabel {
     self.font = UIFont.boldSystemFont(ofSize: size)
   }
   
+  
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
@@ -29,6 +30,8 @@ class RUMainLabel: UILabel {
   
   private func configure() {
     translatesAutoresizingMaskIntoConstraints = false
-    textColor = .black
+    textColor = .label
+    minimumScaleFactor = 0.9
+    lineBreakMode = .byTruncatingTail
   }
 }
