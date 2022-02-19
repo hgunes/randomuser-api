@@ -11,7 +11,7 @@ class UserCell: UICollectionViewCell {
   
   static let reuseID = "UserCell"
   
-  let nameLabel = RUMainLabel()
+  let nameLabel = RUMainLabel(align: .left, size: 18)
   let userAvatar = RUAvatarImageView(frame: .zero)
   
   

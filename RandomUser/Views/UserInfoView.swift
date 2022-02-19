@@ -11,7 +11,7 @@ class UserInfoView: UIView {
   
   let userAvatar = RUAvatarImageView(frame: .zero)
   let username = RUMainLabel(align: .center, size: 32)
-  var personalDataLabel = RUMainLabel(align: .center, size: 24)
+  var personalDataLabel = RUMainLabel(align: .center, size: 20)
   
   var user: User!
   
@@ -57,7 +57,7 @@ class UserInfoView: UIView {
       userAvatar.heightAnchor.constraint(equalToConstant: avatarEdge),
       userAvatar.widthAnchor.constraint(equalToConstant: avatarEdge),
       
-      username.topAnchor.constraint(equalTo: userAvatar.bottomAnchor, constant: 15),
+      username.topAnchor.constraint(equalTo: userAvatar.bottomAnchor, constant: 20),
       username.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding),
       username.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding),
       username.heightAnchor.constraint(equalToConstant: 20),

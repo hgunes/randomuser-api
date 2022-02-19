@@ -15,6 +15,13 @@ class RUMainLabel: UILabel {
     configure()
   }
   
+  
+  convenience init(align: NSTextAlignment, size: CGFloat) {
+    self.init(frame: .zero)
+    self.textAlignment = align
+    self.font = UIFont.boldSystemFont(ofSize: size)
+  }
+  
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
@@ -22,7 +29,6 @@ class RUMainLabel: UILabel {
   
   private func configure() {
     translatesAutoresizingMaskIntoConstraints = false
-    font = UIFont.boldSystemFont(ofSize: 18)
     textColor = .black
   }
 }

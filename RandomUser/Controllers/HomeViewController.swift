@@ -76,4 +76,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     return cell
   }
   
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let destinationVC = UserInfoVC(user: users[indexPath.row])
+    present(destinationVC, animated: true)
+  }
+  
 }

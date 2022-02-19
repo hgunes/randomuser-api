@@ -45,8 +45,8 @@ class UserInfoVC: UIViewController {
     otherInfoView.translatesAutoresizingMaskIntoConstraints = false
     getLocationButton.translatesAutoresizingMaskIntoConstraints = false
     
-    mainInfoView.backgroundColor = .systemGreen
-    otherInfoView.backgroundColor = .systemPurple
+//    mainInfoView.backgroundColor = .systemGreen
+//    otherInfoView.backgroundColor = .systemPurple
     
     getLocationButton.backgroundColor = .blue
     getLocationButton.layer.cornerRadius = 10
@@ -67,7 +67,7 @@ class UserInfoVC: UIViewController {
       otherInfoView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
       otherInfoView.heightAnchor.constraint(equalToConstant: 320),
       
-      getLocationButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -padding),
+      getLocationButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -padding * 2),
       getLocationButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
       getLocationButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
       getLocationButton.heightAnchor.constraint(equalToConstant: 50)
