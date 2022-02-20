@@ -84,7 +84,8 @@ class UserInfoVC: UIViewController {
   
   @objc
   func getLocationButtonClicked() {
-    let locationVC = UINavigationController(rootViewController: LocationVC())
-    present(locationVC, animated: true)
+    let locationVC = LocationVC()
+    locationVC.user = user
+    present(UINavigationController(rootViewController: locationVC), animated: true)
   }
 }

@@ -6,20 +6,43 @@
 //
 
 import UIKit
+import MapKit
 
 class LocationVC: UIViewController {
+  
+  var user: User!
+  
+  let mapView = MKMapView()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    view.backgroundColor = .green
+    configure()
     configureNavigationController()
+    addPins()
   }
   
   
   func configureNavigationController() {
     let doneButton = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(dismissVC))
     navigationItem.leftBarButtonItem = doneButton
+  }
+  
+  
+  private func configure() {
+    mapView.translatesAutoresizingMaskIntoConstraints = false
+    view.addSubview(mapView)
+    mapView.frame = view.bounds
+    mapView.overrideUserInterfaceStyle = .dark
+  }
+  
+  
+  func addPins() {
+    let pin = MKPointAnnotation()
+    pin.title = user.name.fullName
+    pin.coordinate = CLLocationCoordinate2D(latitude: Double(user.location.coordinates.latitude)!, longitude: Double(user.location.coordinates.longitude)!)
+    
+    mapView.addAnnotation(pin)
   }
   
   
