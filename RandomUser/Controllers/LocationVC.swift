@@ -12,12 +12,12 @@ class LocationVC: UIViewController {
   
   var user: User!
   
-  let mapView = MKMapView()
+  let mapView = RUMapView(frame: .zero)
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    configure()
+    configureMapView()
     configureNavigationController()
     addPins()
   }
@@ -29,11 +29,9 @@ class LocationVC: UIViewController {
   }
   
   
-  private func configure() {
-    mapView.translatesAutoresizingMaskIntoConstraints = false
+  private func configureMapView() {
     view.addSubview(mapView)
     mapView.frame = view.bounds
-    mapView.overrideUserInterfaceStyle = .dark
   }
   
   
