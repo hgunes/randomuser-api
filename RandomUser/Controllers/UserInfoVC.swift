@@ -84,6 +84,7 @@ class UserInfoVC: UIViewController {
   
   @objc
   func getLocationButtonClicked() {
-    print("Fav button clicked")
+    let locationVC = UINavigationController(rootViewController: LocationVC())
+    present(locationVC, animated: true)
   }
 }
