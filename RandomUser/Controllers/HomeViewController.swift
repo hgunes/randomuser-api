@@ -78,7 +78,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     let destinationVC = UserInfoVC(user: users[indexPath.row])
-    present(destinationVC, animated: true)
+    let navitagitonController = UINavigationController(rootViewController: destinationVC)
+    present(navitagitonController, animated: true)
   }
   
 }

@@ -19,12 +19,26 @@ class UserInfoVC: UIViewController {
     super.viewDidLoad()
     
     configure()
+    configureNavigationController()
+  }
+  
+  
+  func configureNavigationController() {
+    let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissVC))
+    navigationItem.rightBarButtonItem = doneButton
+  }
+  
+  
+  @objc
+  func dismissVC() {
+    dismiss(animated: true)
   }
   
   
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
+  
   
   init(user: User) {
     super.init(nibName: nil, bundle: nil)
@@ -55,12 +69,12 @@ class UserInfoVC: UIViewController {
     let padding: CGFloat = 20
     
     NSLayoutConstraint.activate([
-      mainInfoView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: padding * 3),
+      mainInfoView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: padding),
       mainInfoView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
       mainInfoView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
       mainInfoView.heightAnchor.constraint(equalToConstant: 220),
       
-      personalInfoView.topAnchor.constraint(equalTo: mainInfoView.bottomAnchor, constant: padding * 2),
+      personalInfoView.topAnchor.constraint(equalTo: mainInfoView.bottomAnchor, constant: padding),
       personalInfoView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
       personalInfoView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
       personalInfoView.heightAnchor.constraint(equalToConstant: 340),
