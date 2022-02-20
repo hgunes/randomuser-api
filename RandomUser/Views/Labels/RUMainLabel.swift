@@ -30,8 +30,9 @@ class RUMainLabel: UILabel {
   
   private func configure() {
     translatesAutoresizingMaskIntoConstraints = false
+    adjustsFontSizeToFitWidth = true
     textColor = .label
-    minimumScaleFactor = 0.9
-    lineBreakMode = .byTruncatingTail
+    minimumScaleFactor = 0.8
+    
   }
 }
