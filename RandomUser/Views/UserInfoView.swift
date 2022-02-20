@@ -13,7 +13,6 @@ class UserInfoView: UIView {
   let username = RUMainLabel(align: .center, size: 32)
   var personalDataLabel = RUSecondaryLabel(align: .center, size: 20)
   
-  var user: User!
   
   override init(frame: CGRect) {
     super.init(frame: frame)

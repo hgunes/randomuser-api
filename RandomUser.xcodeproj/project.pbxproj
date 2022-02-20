@@ -12,6 +12,7 @@
 		BE25DA5627C01BE200691293 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE25DA5527C01BE200691293 /* UserInfoView.swift */; };
 		BE25DA5927C023EE00691293 /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE25DA5827C023EE00691293 /* UserInfoVC.swift */; };
 		BE25DA5C27C103D200691293 /* RUSecondaryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE25DA5B27C103D200691293 /* RUSecondaryLabel.swift */; };
+		BE25DA6427C10B2200691293 /* PersonalInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE25DA6327C10B2200691293 /* PersonalInfoView.swift */; };
 		BE2621F027BC516700D7C8AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2621EF27BC516700D7C8AA /* AppDelegate.swift */; };
 		BE2621F227BC516700D7C8AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2621F127BC516700D7C8AA /* SceneDelegate.swift */; };
 		BE2621F927BC516B00D7C8AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE2621F827BC516B00D7C8AA /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		BE25DA5527C01BE200691293 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		BE25DA5827C023EE00691293 /* UserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoVC.swift; sourceTree = "<group>"; };
 		BE25DA5B27C103D200691293 /* RUSecondaryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RUSecondaryLabel.swift; sourceTree = "<group>"; };
+		BE25DA6327C10B2200691293 /* PersonalInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoView.swift; sourceTree = "<group>"; };
 		BE2621EC27BC516700D7C8AA /* RandomUser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomUser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE2621EF27BC516700D7C8AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE2621F127BC516700D7C8AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				BE25DA4D27BED6AF00691293 /* Labels */,
 				BE26221C27BDB7E800D7C8AA /* Cells */,
 				BE25DA5527C01BE200691293 /* UserInfoView.swift */,
+				BE25DA6327C10B2200691293 /* PersonalInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				BE25DA5327BEDCF900691293 /* RUAvatarImageView.swift in Sources */,
 				BE25DA5C27C103D200691293 /* RUSecondaryLabel.swift in Sources */,
 				BE26221727BDA38300D7C8AA /* UserCell.swift in Sources */,
+				BE25DA6427C10B2200691293 /* PersonalInfoView.swift in Sources */,
 				BE25DA5627C01BE200691293 /* UserInfoView.swift in Sources */,
 				BE25DA5927C023EE00691293 /* UserInfoVC.swift in Sources */,
 			);

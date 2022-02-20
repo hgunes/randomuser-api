@@ -12,7 +12,7 @@ class UserInfoVC: UIViewController {
   var user: User!
   
   let mainInfoView = UserInfoView(frame: .zero)
-  let otherInfoView = UIView()
+  let personalInfoView = PersonalInfoView(frame: .zero)
   let getLocationButton = UIButton()
   
   override func viewDidLoad() {
@@ -36,17 +36,15 @@ class UserInfoVC: UIViewController {
     view.backgroundColor = .systemBackground
     
     view.addSubview(mainInfoView)
-    view.addSubview(otherInfoView)
+    view.addSubview(personalInfoView)
     view.addSubview(getLocationButton)
     
     mainInfoView.set(user: user)
+    personalInfoView.set(user: user)
     
     mainInfoView.translatesAutoresizingMaskIntoConstraints = false
-    otherInfoView.translatesAutoresizingMaskIntoConstraints = false
+    personalInfoView.translatesAutoresizingMaskIntoConstraints = false
     getLocationButton.translatesAutoresizingMaskIntoConstraints = false
-    
-//    mainInfoView.backgroundColor = .systemGreen
-//    otherInfoView.backgroundColor = .systemPurple
     
     getLocationButton.backgroundColor = .blue
     getLocationButton.layer.cornerRadius = 10
@@ -62,10 +60,10 @@ class UserInfoVC: UIViewController {
       mainInfoView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
       mainInfoView.heightAnchor.constraint(equalToConstant: 220),
       
-      otherInfoView.topAnchor.constraint(equalTo: mainInfoView.bottomAnchor, constant: padding * 2),
-      otherInfoView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
-      otherInfoView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
-      otherInfoView.heightAnchor.constraint(equalToConstant: 320),
+      personalInfoView.topAnchor.constraint(equalTo: mainInfoView.bottomAnchor, constant: padding * 2),
+      personalInfoView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
+      personalInfoView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
+      personalInfoView.heightAnchor.constraint(equalToConstant: 340),
       
       getLocationButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -padding * 2),
       getLocationButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
@@ -73,6 +71,7 @@ class UserInfoVC: UIViewController {
       getLocationButton.heightAnchor.constraint(equalToConstant: 50)
     ])
   }
+  
   
   @objc
   func getLocationButtonClicked() {
