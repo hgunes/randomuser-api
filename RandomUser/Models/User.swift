@@ -37,9 +37,18 @@ struct Picture: Decodable {
 
 struct Location: Decodable {
   var coordinates: Coordinates
+  var street: Street
+  var city: String
+  var state: String
+  var country: String
 }
 
 struct Coordinates: Decodable {
   var latitude: String
   var longitude: String
+}
+
+struct Street: Decodable {
+  var name: String
+  var number: Int
 }
