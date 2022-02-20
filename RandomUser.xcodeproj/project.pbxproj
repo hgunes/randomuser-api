@@ -22,6 +22,7 @@
 		BE26220D27BC583200D7C8AA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE26220C27BC583200D7C8AA /* User.swift */; };
 		BE26221427BC638200D7C8AA /* RUError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE26221327BC638200D7C8AA /* RUError.swift */; };
 		BE26221727BDA38300D7C8AA /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE26221627BDA38300D7C8AA /* UserCell.swift */; };
+		BEC9588527C24DF600CB197F /* RULocationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC9588427C24DF600CB197F /* RULocationButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		BE26220C27BC583200D7C8AA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BE26221327BC638200D7C8AA /* RUError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RUError.swift; sourceTree = "<group>"; };
 		BE26221627BDA38300D7C8AA /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		BEC9588427C24DF600CB197F /* RULocationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RULocationButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 		BE26221B27BDB7D400D7C8AA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BEC9588327C24DDC00CB197F /* Buttons */,
 				BE25DA5127BEDCE300691293 /* ImageViews */,
 				BE25DA4D27BED6AF00691293 /* Labels */,
 				BE26221C27BDB7E800D7C8AA /* Cells */,
@@ -164,6 +167,14 @@
 				BE2621FA27BC516B00D7C8AA /* LaunchScreen.storyboard */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		BEC9588327C24DDC00CB197F /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				BEC9588427C24DF600CB197F /* RULocationButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +249,7 @@
 				BE25DA4F27BED6CB00691293 /* RUMainLabel.swift in Sources */,
 				BE26220A27BC57F700D7C8AA /* NetworkManager.swift in Sources */,
 				BE26221427BC638200D7C8AA /* RUError.swift in Sources */,
+				BEC9588527C24DF600CB197F /* RULocationButton.swift in Sources */,
 				BE2621F027BC516700D7C8AA /* AppDelegate.swift in Sources */,
 				BE2621F227BC516700D7C8AA /* SceneDelegate.swift in Sources */,
 				BE26220D27BC583200D7C8AA /* User.swift in Sources */,
