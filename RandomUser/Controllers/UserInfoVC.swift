@@ -13,7 +13,7 @@ class UserInfoVC: UIViewController {
   
   let mainInfoView = UserInfoView(frame: .zero)
   let personalInfoView = PersonalInfoView(frame: .zero)
-  let getLocationButton = UIButton()
+  let getLocationButton = RULocationButton(frame: .zero)
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -58,11 +58,6 @@ class UserInfoVC: UIViewController {
     
     mainInfoView.translatesAutoresizingMaskIntoConstraints = false
     personalInfoView.translatesAutoresizingMaskIntoConstraints = false
-    getLocationButton.translatesAutoresizingMaskIntoConstraints = false
-    
-    getLocationButton.backgroundColor = .blue
-    getLocationButton.layer.cornerRadius = 10
-    getLocationButton.setTitle("Get location", for: .normal)
     
     getLocationButton.addTarget(self, action: #selector(getLocationButtonClicked), for: .touchUpInside)
     
@@ -89,6 +84,8 @@ class UserInfoVC: UIViewController {
   
   @objc
   func getLocationButtonClicked() {
-    print("Fav button clicked")
+    let locationVC = LocationVC()
+    locationVC.user = user
+    present(UINavigationController(rootViewController: locationVC), animated: true)
   }
 }

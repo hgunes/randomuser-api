@@ -22,6 +22,9 @@
 		BE26220D27BC583200D7C8AA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE26220C27BC583200D7C8AA /* User.swift */; };
 		BE26221427BC638200D7C8AA /* RUError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE26221327BC638200D7C8AA /* RUError.swift */; };
 		BE26221727BDA38300D7C8AA /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE26221627BDA38300D7C8AA /* UserCell.swift */; };
+		BE7385F027C275C6002F2AAC /* RUMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7385EF27C275C6002F2AAC /* RUMapView.swift */; };
+		BEC9588527C24DF600CB197F /* RULocationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC9588427C24DF600CB197F /* RULocationButton.swift */; };
+		BEC9588827C24F3500CB197F /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC9588727C24F3500CB197F /* LocationVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		BE26220C27BC583200D7C8AA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BE26221327BC638200D7C8AA /* RUError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RUError.swift; sourceTree = "<group>"; };
 		BE26221627BDA38300D7C8AA /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		BE7385EF27C275C6002F2AAC /* RUMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RUMapView.swift; sourceTree = "<group>"; };
+		BEC9588427C24DF600CB197F /* RULocationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RULocationButton.swift; sourceTree = "<group>"; };
+		BEC9588727C24F3500CB197F /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,7 @@
 			children = (
 				BE26220527BC567D00D7C8AA /* HomeViewController.swift */,
 				BE25DA5827C023EE00691293 /* UserInfoVC.swift */,
+				BEC9588727C24F3500CB197F /* LocationVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -122,6 +129,8 @@
 		BE26221B27BDB7D400D7C8AA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BE7385EE27C275B4002F2AAC /* Maps */,
+				BEC9588327C24DDC00CB197F /* Buttons */,
 				BE25DA5127BEDCE300691293 /* ImageViews */,
 				BE25DA4D27BED6AF00691293 /* Labels */,
 				BE26221C27BDB7E800D7C8AA /* Cells */,
@@ -164,6 +173,22 @@
 				BE2621FA27BC516B00D7C8AA /* LaunchScreen.storyboard */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		BE7385EE27C275B4002F2AAC /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				BE7385EF27C275C6002F2AAC /* RUMapView.swift */,
+			);
+			path = Maps;
+			sourceTree = "<group>";
+		};
+		BEC9588327C24DDC00CB197F /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				BEC9588427C24DF600CB197F /* RULocationButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,11 +263,14 @@
 				BE25DA4F27BED6CB00691293 /* RUMainLabel.swift in Sources */,
 				BE26220A27BC57F700D7C8AA /* NetworkManager.swift in Sources */,
 				BE26221427BC638200D7C8AA /* RUError.swift in Sources */,
+				BEC9588527C24DF600CB197F /* RULocationButton.swift in Sources */,
 				BE2621F027BC516700D7C8AA /* AppDelegate.swift in Sources */,
+				BEC9588827C24F3500CB197F /* LocationVC.swift in Sources */,
 				BE2621F227BC516700D7C8AA /* SceneDelegate.swift in Sources */,
 				BE26220D27BC583200D7C8AA /* User.swift in Sources */,
 				BE26220627BC567D00D7C8AA /* HomeViewController.swift in Sources */,
 				BE25DA5327BEDCF900691293 /* RUAvatarImageView.swift in Sources */,
+				BE7385F027C275C6002F2AAC /* RUMapView.swift in Sources */,
 				BE25DA5C27C103D200691293 /* RUSecondaryLabel.swift in Sources */,
 				BE26221727BDA38300D7C8AA /* UserCell.swift in Sources */,
 				BE25DA6427C10B2200691293 /* PersonalInfoView.swift in Sources */,
