@@ -56,9 +56,6 @@ class UserInfoVC: UIViewController {
     mainInfoView.set(user: user)
     personalInfoView.set(user: user)
     
-    mainInfoView.translatesAutoresizingMaskIntoConstraints = false
-    personalInfoView.translatesAutoresizingMaskIntoConstraints = false
-    
     getLocationButton.addTarget(self, action: #selector(getLocationButtonClicked), for: .touchUpInside)
     
     let padding: CGFloat = 20
