@@ -9,7 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
   
-  var users: [User] = []
+  var userViewModels: [UserViewModel] = []
   var collectionView: UICollectionView!
   
   
@@ -29,7 +29,7 @@ class HomeViewController: UIViewController {
       
       switch result {
       case .success(let users):
-        self.users = users
+        self.userViewModels = users.map({ return UserViewModel(user: $0)})
         DispatchQueue.main.async {
           self.collectionView.reloadData()
         }
@@ -66,20 +66,22 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return users.count
+    return userViewModels.count
   }
   
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UserCell.reuseID, for: indexPath) as! UserCell
-    cell.set(name: users[indexPath.row].name.fullName, avatarUrl: users[indexPath.row].picture.large)
+    let userViewModel = userViewModels[indexPath.row]
+    cell.userViewModel = userViewModel
+//    cell.set(name: users[indexPath.row].name.fullName, avatarUrl: users[indexPath.row].picture.large)
     return cell
   }
   
-  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    let destinationVC = UserInfoVC(user: users[indexPath.row])
-    let navitagitonController = UINavigationController(rootViewController: destinationVC)
-    present(navitagitonController, animated: true)
-  }
+//  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//    let destinationVC = UserInfoVC(user: users[indexPath.row])
+//    let navitagitonController = UINavigationController(rootViewController: destinationVC)
+//    present(navitagitonController, animated: true)
+//  }
   
 }

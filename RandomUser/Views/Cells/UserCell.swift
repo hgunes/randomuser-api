@@ -9,6 +9,12 @@ import UIKit
 
 class UserCell: UICollectionViewCell {
   
+  var userViewModel: UserViewModel! {
+    didSet {
+      nameLabel.text = userViewModel.fullName
+    }
+  }
+  
   static let reuseID = "UserCell"
   
   let nameLabel = RUMainLabel(align: .left, size: 18)
