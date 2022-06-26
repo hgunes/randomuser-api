@@ -24,11 +24,6 @@ struct User: Decodable {
 struct Name: Decodable {
   var first: String
   var last: String
-  
-  var fullName: String {
-    let fullName = "\(first) \(last)"
-    return fullName
-  }
 }
 
 struct Picture: Decodable {

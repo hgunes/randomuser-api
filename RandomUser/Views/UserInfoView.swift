@@ -27,7 +27,7 @@ class UserInfoView: UIView {
   
   
   func set(user: User) {
-    username.text = user.name.fullName
+//    username.text = user.name.fullName
     personalDataLabel.text = "\(user.gender), \(user.nat)"
     
     NetworkManager.shared.fetchUserAvatar(for: user.picture.large) { [weak self] image in

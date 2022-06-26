@@ -37,7 +37,7 @@ class LocationVC: UIViewController {
   
   func addPins() {
     let pin = MKPointAnnotation()
-    pin.title = user.name.fullName
+//    pin.title = user.name.fullName
     pin.coordinate = CLLocationCoordinate2D(latitude: Double(user.location.coordinates.latitude)!, longitude: Double(user.location.coordinates.longitude)!)
     
     mapView.addAnnotation(pin)

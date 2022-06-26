@@ -12,6 +12,13 @@ class UserCell: UICollectionViewCell {
   var userViewModel: UserViewModel! {
     didSet {
       nameLabel.text = userViewModel.fullName
+      
+      NetworkManager.shared.fetchUserAvatar(for: userViewModel.avatarURL, completed: { image in
+        DispatchQueue.main.async {
+          self.userAvatar.image = image
+        }
+      })
+      
     }
   }
   
@@ -29,19 +36,6 @@ class UserCell: UICollectionViewCell {
   
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
-  }
-  
-  
-  func set(name: String, avatarUrl: String) {
-    nameLabel.text = name
-    
-    NetworkManager.shared.fetchUserAvatar(for: avatarUrl) { [weak self] image in
-      guard let self = self else { return }
-      
-      DispatchQueue.main.async {
-        self.userAvatar.image = image
-      }
-    }
   }
   
   
