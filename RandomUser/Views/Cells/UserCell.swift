@@ -9,19 +9,6 @@ import UIKit
 
 class UserCell: UICollectionViewCell {
   
-  var userViewModel: UserViewModel! {
-    didSet {
-      nameLabel.text = userViewModel.fullName
-      
-      NetworkManager.shared.fetchUserAvatar(for: userViewModel.avatarURL, completed: { image in
-        DispatchQueue.main.async {
-          self.userAvatar.image = image
-        }
-      })
-      
-    }
-  }
-  
   static let reuseID = "UserCell"
   
   let nameLabel = RUMainLabel(align: .left, size: 18)
@@ -36,6 +23,18 @@ class UserCell: UICollectionViewCell {
   
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
+  }
+  
+  
+  func set(userViewModel: UserViewModel) {
+    nameLabel.text = userViewModel.fullName
+    
+    NetworkManager.shared.fetchUserAvatar(for: userViewModel.avatarURL, completed: { image in
+      DispatchQueue.main.async {
+        self.userAvatar.image = image
+      }
+    })
+
   }
   
   

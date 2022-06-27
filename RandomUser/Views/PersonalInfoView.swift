@@ -8,6 +8,23 @@
 import UIKit
 
 class PersonalInfoView: UIView {
+
+  
+//  var userViewModel: UserViewModel! {
+  
+  ///  This property will be taken from UserInfoVC
+  ///  and update PersonalInfoView properties' attributes
+
+//    didSet{
+//      phoneLabel.text = "Phone"
+//      emailLabel.text = "Email address"
+//      addressLabel.text = "Address"
+//
+//      phoneNumber.text = userViewModel.phoneNumber
+//      emailAddress.text = userViewModel.emailAddress
+//      address.text = userViewModel.address
+//    }
+//  }
   
   let phoneLabel = RUSecondaryLabel(align: .left, size: 18)
   let phoneNumber = RUMainLabel(align: .left, size: 24)
@@ -30,14 +47,14 @@ class PersonalInfoView: UIView {
     fatalError("init(coder:) has not been implemented")
   }
   
-  func set(user: User) {
+  func set(userViewModel: UserViewModel) {
     phoneLabel.text = "Phone"
     emailLabel.text = "Email address"
     addressLabel.text = "Address"
     
-    phoneNumber.text = user.phone
-    emailAddress.text = user.email
-    address.text = "\(user.location.street.name) \(user.location.street.number), \(user.location.city), \(user.location.state) | \(user.location.country)"
+    phoneNumber.text = userViewModel.phoneNumber
+    emailAddress.text = userViewModel.emailAddress
+    address.text = userViewModel.address
   }
   
   

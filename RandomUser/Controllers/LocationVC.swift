@@ -10,7 +10,7 @@ import MapKit
 
 class LocationVC: UIViewController {
   
-  var user: User!
+  var userViewModel: UserViewModel!
   
   let mapView = RUMapView(frame: .zero)
   
@@ -38,7 +38,7 @@ class LocationVC: UIViewController {
   func addPins() {
     let pin = MKPointAnnotation()
 //    pin.title = user.name.fullName
-    pin.coordinate = CLLocationCoordinate2D(latitude: Double(user.location.coordinates.latitude)!, longitude: Double(user.location.coordinates.longitude)!)
+    pin.coordinate = CLLocationCoordinate2D(latitude: userViewModel.latitude, longitude: userViewModel.longitude)
     
     mapView.addAnnotation(pin)
   }

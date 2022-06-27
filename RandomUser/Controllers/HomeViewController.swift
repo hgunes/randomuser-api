@@ -73,15 +73,16 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UserCell.reuseID, for: indexPath) as! UserCell
     let userViewModel = userViewModels[indexPath.row]
-    cell.userViewModel = userViewModel
-//    cell.set(name: users[indexPath.row].name.fullName, avatarUrl: users[indexPath.row].picture.large)
+//    cell.userViewModel = userViewModel
+    cell.set(userViewModel: userViewModel)
     return cell
   }
   
-//  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//    let destinationVC = UserInfoVC(user: users[indexPath.row])
-//    let navitagitonController = UINavigationController(rootViewController: destinationVC)
-//    present(navitagitonController, animated: true)
-//  }
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let userViewModel = userViewModels[indexPath.row]
+    let destinationVC = UserInfoVC(userViewModel: userViewModel)
+    let navitagitonController = UINavigationController(rootViewController: destinationVC)
+    present(navitagitonController, animated: true)
+  }
   
 }

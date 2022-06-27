@@ -11,7 +11,7 @@ class UserInfoView: UIView {
   
   let userAvatar = RUAvatarImageView(frame: .zero)
   let username = RUMainLabel(align: .center, size: 32)
-  var personalDataLabel = RUSecondaryLabel(align: .center, size: 20)
+  let personalDataLabel = RUSecondaryLabel(align: .center, size: 20)
   
   
   override init(frame: CGRect) {
@@ -26,17 +26,18 @@ class UserInfoView: UIView {
   }
   
   
-  func set(user: User) {
-//    username.text = user.name.fullName
-    personalDataLabel.text = "\(user.gender), \(user.nat)"
+  func set(userViewModel: UserViewModel) {
+    username.text = userViewModel.fullName
+    personalDataLabel.text = "\(userViewModel.gender), \(userViewModel.nationality)"
     
-    NetworkManager.shared.fetchUserAvatar(for: user.picture.large) { [weak self] image in
+    NetworkManager.shared.fetchUserAvatar(for: userViewModel.avatarURL) { [weak self] image in
       guard let self = self else { return }
       
       DispatchQueue.main.async {
         self.userAvatar.image = image
       }
     }
+
   }
   
   

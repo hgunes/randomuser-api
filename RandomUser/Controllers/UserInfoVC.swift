@@ -9,7 +9,7 @@ import UIKit
 
 class UserInfoVC: UIViewController {
   
-  var user: User!
+  var userViewModel: UserViewModel!
   
   let mainInfoView = UserInfoView(frame: .zero)
   let personalInfoView = PersonalInfoView(frame: .zero)
@@ -40,9 +40,11 @@ class UserInfoVC: UIViewController {
   }
   
   
-  init(user: User) {
+  init(userViewModel: UserViewModel) {
     super.init(nibName: nil, bundle: nil)
-    self.user = user
+    self.userViewModel = userViewModel
+    mainInfoView.set(userViewModel: userViewModel)
+    personalInfoView.set(userViewModel: userViewModel)
   }
   
   
@@ -52,9 +54,6 @@ class UserInfoVC: UIViewController {
     view.addSubview(mainInfoView)
     view.addSubview(personalInfoView)
     view.addSubview(getLocationButton)
-    
-    mainInfoView.set(user: user)
-    personalInfoView.set(user: user)
     
     mainInfoView.translatesAutoresizingMaskIntoConstraints = false
     personalInfoView.translatesAutoresizingMaskIntoConstraints = false
@@ -85,7 +84,7 @@ class UserInfoVC: UIViewController {
   @objc
   func getLocationButtonClicked() {
     let locationVC = LocationVC()
-    locationVC.user = user
+    locationVC.userViewModel = userViewModel
     present(UINavigationController(rootViewController: locationVC), animated: true)
   }
 }
