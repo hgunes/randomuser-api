@@ -59,7 +59,8 @@ class UserTests: XCTestCase {
     let sampleResult = result.results[0]
     
     XCTAssertNotNil(sampleResult)
-    XCTAssertEqual(sampleResult.name.fullName, "Gerardo Mora")
+    XCTAssertEqual(sampleResult.name.first, "Gerardo")
+    XCTAssertEqual(sampleResult.name.last, "Mora")
     XCTAssertEqual(sampleResult.gender, "male")
     XCTAssertEqual(sampleResult.email, "gerardo.mora@example.com")
     XCTAssertEqual(sampleResult.phone, "971-901-537")

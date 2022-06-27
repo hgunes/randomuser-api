@@ -216,6 +216,21 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		BEB681B6286A23EC00196536 /* ModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				BEDBB10C285FC6170060D07C /* UserTests.swift */,
+			);
+			path = ModelTests;
+			sourceTree = "<group>";
+		};
+		BEB681B7286A240300196536 /* ViewModelTest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModelTest;
+			sourceTree = "<group>";
+		};
 		BEC9588327C24DDC00CB197F /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,7 +242,8 @@
 		BEDBB104285FC5ED0060D07C /* RandomUserTests */ = {
 			isa = PBXGroup;
 			children = (
-				BEDBB10C285FC6170060D07C /* UserTests.swift */,
+				BEB681B7286A240300196536 /* ViewModelTest */,
+				BEB681B6286A23EC00196536 /* ModelTests */,
 			);
 			path = RandomUserTests;
 			sourceTree = "<group>";
